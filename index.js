@@ -20,12 +20,7 @@ btnCancelar.addEventListener("click", function () {
     campoEmail.focus(); 
 }); 
 
-// FECHAR (X): Redireciona para a tela inicial do instituto
-if (btnFechar) {
-    btnFechar.addEventListener("click", function () {
-        window.location.href = "instituto.html";
-    });
-}
+
  
 form.addEventListener("submit", async function (event) { 
     event.preventDefault(); 
