@@ -15,9 +15,9 @@ body {
 
     display: flex; 
     justify-content: center; 
-    align-items: flex-start;  /* Alinha os itens no topo da tela */ 
+    align-items: flex-start;  /* Alinha no topo */ 
     
-    padding: 40px 20px 20px;   /* 40px de espaçamento no topo (ajuste se quiser mais perto/longe da borda) */ 
+    padding: 40px 20px 20px; 
     font-family: Arial, Helvetica, sans-serif; 
     background: #1d1b4b; 
     overflow-x: hidden; 
@@ -42,7 +42,7 @@ body {
     backdrop-filter: blur(4px); 
 } 
 
-/* CARTÃO DE LOGIN */ 
+/* CARTÃO DE LOGIN / CADASTRO */ 
 .card { 
     position: relative; 
     z-index: 1; 
@@ -55,7 +55,7 @@ body {
     animation: entrada 0.6s ease; 
 } 
 
-/* BOTÃO FECHAR (X) */
+/* BOTÃO FECHAR (X - DESATIVADO) */
 .btn-fechar {
     position: absolute;
     top: 18px;
@@ -65,23 +65,21 @@ body {
     font-size: 28px;
     font-weight: bold;
     color: #333;
-    cursor: pointer;
     line-height: 1;
-    transition: color 0.2s, transform 0.2s;
+    pointer-events: none; /* Impede o clique */
+    opacity: 0.5;         /* Aparência desativada */
 }
 
-.btn-fechar:hover {
-    color: #000;
-    transform: scale(1.15);
-}
-
-/* ABAS SUPERIORES (ENTRE / CADASTRE-SE) */
+/* ABAS SUPERIORES (ENTRE / CADASTRE-SE) - CENTRALIZADAS */
 .abas-topo {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 10px;
     margin-bottom: 30px;
     margin-top: 10px;
+    width: 100%;
+    text-align: center;
 }
 
 .aba {
@@ -95,6 +93,7 @@ body {
     align-items: center;
     justify-content: center;
     transition: 0.3s;
+    text-align: center;
 }
 
 .aba-ativa {
@@ -110,6 +109,16 @@ body {
 
 .aba-link:hover {
     background: rgba(53, 56, 102, 0.08);
+}
+
+/* TITULOS INTERNOS / HEADINGS (se usar <h2> ou <h3> para Cadastre-se) */
+.card h1, 
+.card h2, 
+.card h3,
+.titulo-cadastre {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000;
 }
 
 /* LABELS E INPUTS */
@@ -145,14 +154,17 @@ body {
     margin: -10px 0 14px; 
     color: #c00; 
     font-size: 14px; 
+    text-align: center;
 } 
 
-/* BOTÕES AÇÕES */ 
+/* BOTÕES AÇÕES - CENTRALIZADOS */ 
 .acoes { 
     display: flex; 
     justify-content: center;
+    align-items: center;
     gap: 16px; 
     margin-top: 10px;
+    width: 100%;
 } 
 
 .acoes button { 
@@ -165,7 +177,7 @@ body {
     letter-spacing: 0.5px;
 } 
 
-/* BOTÃO LOGIN (Preto) */ 
+/* BOTÃO LOGIN / CADASTRAR */ 
 .btn-entrar { 
     background: #111; 
     color: #fff; 
@@ -181,7 +193,7 @@ body {
     cursor: wait; 
 } 
 
-/* BOTÃO CANCELAR (Contorno) */ 
+/* BOTÃO CANCELAR */ 
 .btn-cancelar { 
     background: transparent; 
     color: #111; 
@@ -193,7 +205,6 @@ body {
 } 
 
 .acoes button:focus-visible, 
-.btn-fechar:focus-visible,
 .aba-link:focus-visible { 
     outline: 2px solid #353866; 
     outline-offset: 2px; 
@@ -220,7 +231,7 @@ body {
 /* RESPONSIVO */ 
 @media (max-width: 600px) { 
     body {
-        padding-top: 20px; /* Reduz o espaçamento no celular se necessário */
+        padding-top: 20px;
     }
 
     .card { 
