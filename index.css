@@ -15,19 +15,13 @@ body {
 
     display: flex; 
     justify-content: center; 
-    align-items: center;      /* Mantém o flexbox centralizado */ 
+    align-items: flex-start;  /* Alinha os itens no topo da tela */ 
     
-    padding: 20px; 
+    padding: 40px 20px 20px;   /* 40px de espaçamento no topo (ajuste se quiser mais perto/longe da borda) */ 
     font-family: Arial, Helvetica, sans-serif; 
     background: #1d1b4b; 
     overflow-x: hidden; 
 }
-
-/* No CSS da sua caixa/card de login: */
-.login-card {
-    margin-bottom: 10vh;     /* Empurra o card levemente para cima */
-}
-
 
 /* INSTITUTO ATRÁS DO LOGIN */ 
 .fundo-instituto { 
@@ -225,6 +219,10 @@ body {
 
 /* RESPONSIVO */ 
 @media (max-width: 600px) { 
+    body {
+        padding-top: 20px; /* Reduz o espaçamento no celular se necessário */
+    }
+
     .card { 
         padding: 35px 22px 26px; 
     } 
