@@ -12,10 +12,6 @@ function mostrarErro(texto) {
     mensagem.textContent = texto; 
 } 
  
-function liberarAcesso() { 
-    sessionStorage.setItem("logado", "true"); 
-    window.location.href = "instituto.html"; 
-} 
  
 // CANCELAR: limpa os campos e a mensagem 
 btnCancelar.addEventListener("click", function () { 
