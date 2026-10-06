@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Portal de informações educacionais - IBEP">
+
+    <title> EDUBRAS </title>
+
+    <link rel="stylesheet" href="instituto.css">
+
+    <script>
+        // Só entra no site quem fez login (a página de login usa
+        // esta mesma página só como fundo, dentro de um iframe).
+        if (window.self === window.top &&
+            sessionStorage.getItem("logado") !== "true") {
+            window.location.replace("index.html");
+        }
+    </script>
+</head>
+<body>
+    <div class="barra-governo">
+        <div class="barra-container">
+            <div class="portal-publico">
+                PORTAL PÚBLICO
+            </div>
+            
+        </div>
+    </div>
+    <header class="cabecalho">
+        <div class="cabecalho-container">
+            <a href="#inicio" class="logo">
+                <div class="logo-simbolo">
+                    E
+                </div>
+                <div class="logo-texto">
+                    <strong>EDUBRAS</strong>
+                    <span>
+                       Portal Brasileiro de Educação
+                    </span>
+                </div>
+            </a>
+            <button
+                class="menu-mobile"
+                id="menuMobile"
+                aria-label="Abrir menu">
+                ☰
+            </button>
+            <nav class="menu-principal" id="menuPrincipal">
+                <a href="#inicio">
+                    Início
+                </a>
+                <a href="#servicos">
+                    Serviços
+                </a>
+                <a href="#dados">
+                    Dados educacionais
+                </a>
+                <a href="#noticias">
+                    Notícias
+                </a>
+                <a href="#sobre">
+                    Sobre
+                </a>
+                <a href="index.html" id="abrirLogin">
+                    Login
+                </a>
+               
+            </nav>
+            <div class="acoes-cabecalho">
+                <button
+                    id="contraste"
+                    class="botao-acessibilidade"
+                    title="Ativar alto contraste">
+                    ◐
+                    <span>Contraste</span>
+                </button>
+                <button
+                    id="aumentarFonte"
+                    class="botao-acessibilidade"
+                    title="Aumentar fonte">
+                    A+
+                </button>
+            </div>
+        </div>
+    </header>
+    <main id="inicio">
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-conteudo">
+                    <span class="tag-hero">
+                        EDUCAÇÃO • PESQUISA • INFORMAÇÃO
+                    </span>
+                    <h1>
+                        Informação que
+                        <strong>transforma a educação</strong>
+                    </h1>
+                    <p>
+                        Consulte informações, dados educacionais,
+                        avaliações e notícias relacionadas à educação
+                        brasileira em um único lugar.
+                    </p>
+                    <div class="hero-botoes">
+                        <a
+                            href="#dados"
+                            class="botao-principal">
+                            Consultar dados
+                        </a>
+                        <a
+                            href="#noticias"
+                            class="botao-secundario">
+                            Ver notícias
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <span class="hero-card-tag">
+                        ENEM 2026
+                    </span>
+                    <h2>
+                        8 e 15
+                        <small>de novembro</small>
+                    </h2>
+                    <p>
+                        Datas de aplicação do Exame Nacional
+                        do Ensino Médio.
+                    </p>
+
+                    <a href="#noticias">
+                        Confira as informações →
+                    </a>
+                </div>
+            </div>
+        </section>
+                        
+        <section
+            class="secao"
+            id="servicos">
+            <div class="container">
+                <div class="titulo-secao">
+                    <span>
+                        SERVIÇOS E SISTEMAS
+                    </span>
+                    <h2>
+                        Encontre o que você precisa
+                    </h2>
+                    <p>
+                        Acesse rapidamente informações relacionadas
+                        aos principais exames e levantamentos educacionais.
+                    </p>
+                </div>
+                <div class="servicos-grid">
+                    <article class="servico-card">
+                        <div class="servico-icone azul">
+                            ENEM
+                        </div>
+                        <h3>
+                            Exame Nacional do Ensino Médio
+                        </h3>
+                        <p>
+                            Informações sobre aplicação, redação,
+                            preparação e resultados do Enem.
+                        </p>
+                        <a
+                            href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Saiba mais →
+                        </a>
+                    </article>
+                    <article class="servico-card">
+                        <div class="servico-icone verde">
+                            SAEB
+                        </div>
+                        <h3>
+                            Sistema de Avaliação da Educação Básica
+                        </h3>
+                        <p>
+                            Informações e resultados relacionados
+                            à avaliação da educação básica.
+                        </p>
+                        <a
+                            href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/saeb"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Saiba mais →
+                        </a>
+                    </article>
+                    <article class="servico-card">
+                        <div class="servico-icone amarelo">
+                            CENSO
+                        </div>
+                        <h3>
+                            Censo Escolar
+                        </h3>
+                        <p>
+                            Dados sobre escolas, matrículas,
+                            estudantes e educação básica.
+                        </p>
+                        <a
+                            href="https://www.gov.br/inep/pt-br/areas-de-atuacao/pesquisas-estatisticas-e-indicadores/censo-escolar"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Saiba mais →
+                        </a>
+                    </article>
+                    <article class="servico-card">
+                        <div class="servico-icone roxo">
+                            ENCCEJA
+                        </div>
+                        <h3>
+                            Exame Nacional para Certificação
+                        </h3>
+                        <p>
+                            Informações sobre o exame destinado
+                            à certificação da educação básica.
+                        </p>
+                        <a
+                            href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Saiba mais →
+                        </a>
+                    </article>
+                </div>
+            </div>
+
+        </section>
+        <section
+            class="secao dados-secao"
+            id="dados">
+
+            <div class="container">
+
+                <div class="titulo-secao">
+
+                    <span>
+                        DADOS EM DESTAQUE
+                    </span>
+
+                    <h2>
+                        Panorama da educação brasileira
+                    </h2>
+
+                    <p>
+                        Alguns indicadores publicados recentemente
+                        pelo Instituto Nacional de Estudos e Pesquisas
+                        Educacionais Anísio Teixeira.
+                    </p>
+
+                </div>
+
+
+                <div class="dados-grid">
+
+
+                    <article class="dado-card">
+
+                        <div class="dado-icone">
+                            
+                        </div>
+
+                        <span class="dado-numero">
+                            46 milhões
+                        </span>
+
+                        <h3>
+                            Matrículas na educação básica
+                        </h3>
+
+                        <p>
+                            Censo Escolar 2025.
+                        </p>
+
+                    </article>
+
+
+                    <article class="dado-card">
+
+                        <div class="dado-icone">
+                            
+                        </div>
+
+                        <span class="dado-numero">
+                            10,1 milhões
+                        </span>
+
+                        <h3>
+                            Matrículas em tempo integral
+                        </h3>
+
+                        <p>
+                            Censo Escolar 2025.
+                        </p>
+
+                    </article>
+
+
+                    <article class="dado-card">
+                        <div class="dado-icone">
+                        </div>
+                        <span class="dado-numero">
+                            73.767
+                        </span>
+                        <h3>
+                            Escolas participantes do Saeb
+                        </h3>
+                        <p>
+                            Resultados finais do Saeb 2025.
+                        </p>
+                    </article>
+                    <article class="dado-card">
+                        <div class="dado-icone">
+                    
+                        </div>
+                        <span class="dado-numero">
+                            5,9 milhões
+                        </span>
+                        <h3>
+                            Estudantes no Saeb
+                        </h3>
+                        <p>
+                            Participação aproximada no Saeb 2025.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section
+            class="secao noticias-secao"
+            id="noticias">
+
+            <div class="container">
+
+                <div class="noticias-topo">
+
+                    <div class="titulo-secao">
+
+                        <span>
+                            ATUALIZAÇÕES
+                        </span>
+
+                        <h2>
+                            Notícias recentes
+                        </h2>
+
+                        <p>
+                            Confira as últimas informações publicadas
+                            oficialmente pelo Inep.
+                        </p>
+
+                    </div>
+
+
+                    <div class="pesquisa-noticias">
+
+                        <label for="campoBusca">
+                            Buscar notícia
+                        </label>
+
+                        <div class="busca">
+
+                            <input
+                                type="search"
+                                id="campoBusca"
+                                placeholder="Digite uma palavra..."
+                                autocomplete="off">
+
+                            <button
+                                type="button"
+                                id="limparBusca">
+
+                                X
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="noticias-grid"
+                    id="listaNoticias">
+
+
+                    <article
+                        class="noticia-card"
+                        data-busca="encceja reaplicação 2026 locais prova">
+
+                        <div class="noticia-data">
+
+                            <strong>
+                                28
+                            </strong>
+
+                            <span>
+                                SET
+                            </span>
+
+                            <small>
+                                2026
+                            </small>
+
+                        </div>
+
+
+                        <div class="noticia-conteudo">
+
+                            <span class="categoria">
+                                ENCCEJA
+                            </span>
+
+                            <h3>
+                                Inep disponibiliza locais de
+                                reaplicação do Encceja Nacional 2026
+                            </h3>
+
+                            <p>
+                                A reaplicação será realizada nos dias
+                                6 e 7 de outubro para os ensinos
+                                fundamental e médio.
+                            </p>
+
+                            <a
+                                href="https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/encceja/inep-disponibiliza-locais-de-reaplicacao-do-encceja-nacional-2026"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="leia-mais">
+
+                                Leia a notícia completa
+                                <span>→</span>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                    <article
+                        class="noticia-card"
+                        data-busca="enem libras plataforma acessibilidade videoprova 2026">
+
+                        <div class="noticia-data">
+
+                            <strong>
+                                24
+                            </strong>
+
+                            <span>
+                                SET
+                            </span>
+
+                            <small>
+                                2026
+                            </small>
+
+                        </div>
+
+
+                        <div class="noticia-conteudo">
+
+                            <span class="categoria">
+                                ENEM
+                            </span>
+
+                            <h3>
+                                Disponível a Plataforma Enem Libras
+                            </h3>
+
+                            <p>
+                                A plataforma reúne videoprovas,
+                                Cartilha de Redação em Libras,
+                                cadernos de questões e gabaritos.
+                            </p>
+
+                            <a
+                                href="https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/enem/disponivel-a-plataforma-enem-libras"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="leia-mais">
+
+                                Leia a notícia completa
+                                <span>→</span>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+                    <article
+                        class="noticia-card"
+                        data-busca="enem redação nota mil preparação 2026 cartilha">
+
+                        <div class="noticia-data">
+
+                            <strong>
+                                22
+                            </strong>
+
+                            <span>
+                                SET
+                            </span>
+
+                            <small>
+                                2026
+                            </small>
+
+                        </div>
+
+
+                        <div class="noticia-conteudo">
+
+                            <span class="categoria">
+                                ENEM
+                            </span>
+
+                            <h3>
+                                Alunos nota mil inspiram preparação
+                                para a redação do Enem 2026
+                            </h3>
+
+                            <p>
+                                Histórias de participantes que alcançaram
+                                a pontuação máxima são apresentadas como
+                                referências de preparação.
+                            </p>
+
+                            <a
+                                href="https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/enem/alunos-nota-mil-inspiram-preparacao-para-a-redacao-do-enem-2026/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="leia-mais">
+
+                                Leia a notícia completa
+                                <span>→</span>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                    <article
+                        class="noticia-card"
+                        data-busca="inclusão acessibilidade pessoa deficiência educação enem">
+
+                        <div class="noticia-data">
+
+                            <strong>
+                                21
+                            </strong>
+
+                            <span>
+                                SET
+                            </span>
+
+                            <small>
+                                2026
+                            </small>
+
+                        </div>
+
+
+                        <div class="noticia-conteudo">
+
+                            <span class="categoria">
+                                INSTITUCIONAL
+                            </span>
+
+                            <h3>
+                                Inclusão e acessibilidade na educação
+                            </h3>
+
+                            <p>
+                                O Inep destaca recursos de acessibilidade
+                                e atendimento especializado previstos
+                                em exames e avaliações.
+                            </p>
+
+                            <a
+                                href="https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/institucional/dia-de-luta-da-pessoa-com-deficiencia-destaca-importancia-da-inclusao-na-educacao"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="leia-mais">
+
+                                Leia a notícia completa
+                                <span>→</span>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+
+                <div
+                    class="sem-resultados"
+                    id="semResultados">
+
+                    <div>
+                        🔎
+                    </div>
+
+                    <h3>
+                        Nenhuma notícia encontrada
+                    </h3>
+
+                    <p>
+                        Tente pesquisar por outro termo.
+                    </p>
+
+                </div>
+
+
+                <div class="botao-noticias">
+
+                    <a
+                        href="https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        Ver todas as notícias no Inep →
+
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+        <section
+            class="sobre"
+            id="sobre">
+
+            <div class="container">
+
+                <div class="sobre-grid">
+
+                    <div>
+
+                        <span class="tag-secao">
+                            SOBRE O PROJETO
+                        </span>
+
+                        <h2>
+                            Informação educacional
+                            de forma simples e acessível.
+                        </h2>
+                    </div>
+                    <div>
+                        <p>
+                            O IBEP é uma proposta de portal acadêmico
+                            desenvolvido para apresentar informações
+                            educacionais de maneira organizada,
+                            acessível e responsiva.
+                        </p>
+
+                        <p>
+                            Os conteúdos estatísticos e as notícias
+                            apresentados no projeto têm como referência
+                            publicações oficiais do Instituto Nacional
+                            de Estudos e Pesquisas Educacionais
+                            Anísio Teixeira.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section
+            class="contato"
+            id="contato">
+            <div class="container">
+                <div class="contato-box">
+                    <div>
+                        <span>
+                            FALE CONOSCO
+                        </span>
+                        <h2>
+                            Precisa de informação?
+                        </h2>
+                        <p>
+                            Encontre informações e serviços
+                            educacionais em fontes oficiais.
+                        </p>
+                    </div>
+                    <a
+                        href="https://www.gov.br/inep/pt-br"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="botao-contato">
+
+                        Acessar portal do Inep →
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="rodape">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        IBEP
+                    </div>
+                    <p>
+                        Instituto Brasileiro de
+                        Educação e Pesquisa.
+                    </p>
+                    <small>
+                        Projeto acadêmico demonstrativo.
+                    </small>
+                </div>
+                <div>
+                    <h3>
+                        Navegação
+                    </h3>
+
+                    <a href="#inicio">
+                        Início
+                    </a>
+
+                    <a href="#servicos">
+                        Serviços
+                    </a>
+
+                    <a href="#dados">
+                        Dados
+                    </a>
+
+                    <a href="#noticias">
+                        Notícias
+                    </a>
+                </div>
+                <div></div>
+            </div>
+        </div>
+    </footer>
+    <button
+        id="voltarTopo"
+        class="voltar-topo"
+        aria-label="Voltar ao topo">
+
+        ↑
+    </button>
+    

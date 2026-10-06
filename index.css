@@ -1,0 +1,231 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+} 
+
+html, 
+body { 
+    height: 100%; 
+} 
+
+body { 
+    min-height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;      /* centralizado verticalmente como na imagem */ 
+    padding: 20px; 
+    font-family: Arial, Helvetica, sans-serif; 
+    background: #1d1b4b;      /* fundo roxo escuro de fallback */ 
+    overflow-x: hidden; 
+} 
+
+h2 {
+    justify-content: center;
+}
+
+/* INSTITUTO ATRÁS DO LOGIN */ 
+.fundo-instituto { 
+    position: fixed; 
+    inset: 0; 
+    width: 100%; 
+    height: 100%; 
+    border: 0; 
+    pointer-events: none; 
+    user-select: none; 
+} 
+
+.camada { 
+    position: fixed; 
+    inset: 0; 
+    background: rgba(15, 15, 40, 0.75); 
+    -webkit-backdrop-filter: blur(4px); 
+    backdrop-filter: blur(4px); 
+} 
+
+/* CARTÃO DE LOGIN */ 
+.card { 
+    position: relative; 
+    z-index: 1; 
+    width: 420px; 
+    max-width: 100%; 
+    padding: 40px 36px 36px; 
+    background: #f8f8f8; 
+    border-radius: 35px; 
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4); 
+    animation: entrada 0.6s ease; 
+} 
+
+/* BOTÃO FECHAR (X) */
+.btn-fechar {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.btn-fechar:hover {
+    color: #000;
+    transform: scale(1.15);
+}
+
+/* ABAS SUPERIORES (ENTRE / CADASTRE-SE) */
+.abas-topo {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.aba {
+    padding: 10px 24px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.aba-ativa {
+    background: #353866;
+    color: #fff;
+}
+
+.aba-link {
+    background: transparent;
+    color: #222;
+    border: 1px solid #353866;
+}
+
+.aba-link:hover {
+    background: rgba(53, 56, 102, 0.08);
+}
+
+/* LABELS E INPUTS */
+.card label { 
+    display: block; 
+    margin-bottom: 8px; 
+    color: #000; 
+    font-size: 20px; 
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: bold; 
+} 
+
+.card input { 
+    width: 100%; 
+    padding: 12px 14px; 
+    margin-bottom: 22px; 
+    border: 1px solid #3b4252; 
+    border-radius: 2px; 
+    outline: none; 
+    font-size: 15px; 
+    background: #f8f8f8; 
+    transition: 0.3s; 
+} 
+
+.card input:focus { 
+    border-color: #000; 
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15); 
+} 
+
+/* MENSAGEM DE ERRO */ 
+.erro { 
+    min-height: 20px; 
+    margin: -10px 0 14px; 
+    color: #c00; 
+    font-size: 14px; 
+} 
+
+/* BOTÕES AÇÕES */ 
+.acoes { 
+    display: flex; 
+    justify-content: center;
+    gap: 16px; 
+    margin-top: 10px;
+} 
+
+.acoes button { 
+    padding: 10px 20px; 
+    border-radius: 0; 
+    font-size: 15px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: 0.25s; 
+    letter-spacing: 0.5px;
+} 
+
+/* BOTÃO LOGIN (Preto) */ 
+.btn-entrar { 
+    background: #111; 
+    color: #fff; 
+    border: 1px solid #111; 
+} 
+
+.btn-entrar:hover { 
+    background: #333; 
+} 
+
+.btn-entrar:disabled { 
+    opacity: 0.6; 
+    cursor: wait; 
+} 
+
+/* BOTÃO CANCELAR (Contorno) */ 
+.btn-cancelar { 
+    background: transparent; 
+    color: #111; 
+    border: 1px solid #111; 
+} 
+
+.btn-cancelar:hover { 
+    background: rgba(0, 0, 0, 0.08); 
+} 
+
+.acoes button:focus-visible, 
+.btn-fechar:focus-visible,
+.aba-link:focus-visible { 
+    outline: 2px solid #353866; 
+    outline-offset: 2px; 
+} 
+
+/* ANIMAÇÃO */ 
+@keyframes entrada { 
+    from { 
+        opacity: 0; 
+        transform: translateY(-20px); 
+    } 
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    } 
+} 
+
+@media (prefers-reduced-motion: reduce) { 
+    .card { 
+        animation: none; 
+    } 
+} 
+
+/* RESPONSIVO */ 
+@media (max-width: 600px) { 
+    .card { 
+        padding: 35px 22px 26px; 
+    } 
+    
+    .aba {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}

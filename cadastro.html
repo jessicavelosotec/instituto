@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- Entrada do instituto servindo de fundo (só visual, não clicável) -->
+    <iframe
+        class="fundo-instituto"
+        src="instituto.html"
+        title=""
+        tabindex="-1"
+        aria-hidden="true"
+        scrolling="no">
+    </iframe>
+
+    <div class="camada"></div>
+
+
+    <main class="card">
+
+        <h2>Cadastre-se</h2>
+
+        <form id="cadastroForm" novalidate>
+
+            <label for="email">Email</label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                autocomplete="username"
+                placeholder="seu@email.com"
+            >
+
+            <label for="senha">Senha</label>
+
+            <input
+                type="password"
+                id="senha"
+                name="senha"
+                required
+                minlength="4"
+                autocomplete="new-password"
+                placeholder="Mínimo de 4 caracteres"
+            >
+
+            <label for="confirmar">Confirmar senha</label>
+
+            <input
+                type="password"
+                id="confirmar"
+                name="confirmar"
+                required
+                autocomplete="new-password"
+                placeholder="Digite a senha novamente"
+            >
+
+            <p class="erro" id="erro" role="alert"></p>
+
+            <div class="acoes">
+
+                <button type="submit" class="btn-entrar" id="btnCadastrar">
+                    CADASTRAR
+                </button>
+
+                <button type="button" class="btn-cancelar" id="btnCancelar">
+                    CANCELAR
+                </button>
+
+            </div>
+
+        </form>
+
+     
+    </main>
+
+    <script src="contas.js"></script>
+    <script src="cadastro.js"></script>
+
+</body>
+
+</html>

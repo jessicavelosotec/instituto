@@ -1,0 +1,80 @@
+<!DOCTYPE html> 
+<html lang="pt-BR"> 
+ 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ 
+    <title>Login</title> 
+ 
+    <link rel="stylesheet" href="index.css"> 
+</head> 
+ 
+<body> 
+ 
+    <!-- Entrada do instituto servindo de fundo (só visual, não clicável) --> 
+    <iframe 
+        class="fundo-instituto" 
+        src="instituto.html" 
+        title="" 
+        tabindex="-1" 
+        aria-hidden="true" 
+        scrolling="no"> 
+    </iframe> 
+ 
+    <div class="camada"></div> 
+ 
+    <main class="card"> 
+        <!-- Botão X para fechar / voltar -->
+        <button type="button" class="btn-fechar" id="btnFechar" aria-label="Fechar">&times;</button>
+
+        <!-- Alternador entre Entre / Cadastre-se -->
+        <div class="abas-topo">
+            <span class="aba aba-ativa">ENTRE</span>
+            <a href="cadastro.html" class="aba aba-link">CADASTRE - SE</a>
+        </div>
+ 
+        <form id="loginForm" novalidate> 
+ 
+            <label for="email">Email</label> 
+ 
+            <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required 
+                autocomplete="username" 
+                placeholder="seu@email.com" 
+            > 
+ 
+            <label for="senha">Senha</label> 
+ 
+            <input 
+                type="password" 
+                id="senha" 
+                name="senha" 
+                required 
+                autocomplete="current-password" 
+                placeholder="Digite sua senha" 
+            > 
+ 
+            <p class="erro" id="erro" role="alert"></p> 
+ 
+            <div class="acoes"> 
+                <button type="submit" class="btn-entrar" id="btnEntrar"> 
+                    LOGIN 
+                </button> 
+
+                <button type="button" class="btn-cancelar" id="btnCancelar"> 
+                    CANCELAR 
+                </button> 
+            </div> 
+ 
+        </form> 
+    </main> 
+ 
+    <script src="contas.js"></script> 
+    <script src="index.js"></script> 
+ 
+</body> 
+</html>
